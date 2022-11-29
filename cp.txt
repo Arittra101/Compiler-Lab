@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main(void)
+{
+
+//single line commnet 
+
+printf("Hello");
+
+/* Multi 
+   Line
+	Comment
+
+*/
+
+printf("World");
+return 0;
+}
