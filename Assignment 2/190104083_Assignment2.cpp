@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long int lli;
-lli i, j;
+lli i, j=0;
 #define pii  pair<lli, lli>
 
    ofstream output_file;
@@ -128,11 +128,15 @@ void isNumber(string s)
     for(int m=0; m<s.size(); m++)
     {
         lli x = s[m]-'0';
-        if(x>=0 && x<=9 || s[m]=='.') cnt++;
+        if(x>=0 && x<=9 || s[m]=='.') {
+            cnt++;
+
+        }
     }
     if(cnt==s.size())
     {
         cout<<"[num "<<s<<"]"<<" ";
+        j++;
         output_file<<"[num "<<s<<"]"<<" ";
         flag=1;
     }
@@ -255,5 +259,6 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
     solve();
+    cout<<j<<endl;
     return 0;
 }
